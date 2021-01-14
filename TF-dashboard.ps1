@@ -7,9 +7,9 @@ $dashboard = @()
 
 #This request will fetch the unique IDs for all applications under a team  https://denimgroup.atlassian.net/wiki/spaces/TDOC/pages/22910548/Get+Team+by+Name+-+API
 $Request1 = 'https://{ThreadFix-Base-URL}/threadfix/rest/latest/teams/lookup?name={team_name}&apiKey={API-KEY for your Threadfix Environment}'
-$Data = Invoke-WebRequest $Request1 -Method get | ConvertFrom-Json 
-#Extracting the application ID from the PS object
-$applicationID = $Data | select -expand object | select -expand applications | select -expand id
+$TeamData = Invoke-WebRequest $Request1 -Method get | ConvertFrom-Json 
+#Extracting the application IDs from the PS object containing team's information
+$applicationID = $TeamData | select -expand object | select -expand applications | select -expand id
 
 Foreach ($id in $applicationID)
 {
