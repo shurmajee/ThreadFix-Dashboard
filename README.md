@@ -11,4 +11,4 @@ The script generates a simple html report which mimics the dashboard that one ma
 
 ThreadFix does not allow efficient high level tracking of issues over long periods of time. For example, you need to see how overall numbers for a certain team have varied over the past 12 months, you would need to know how the dashboard looked like a few months back. For cases such as this the script can be used to extract data on a monthly basis and the output can be written to a folder which is synced to cloud (onedrive. box etc.). This would allow you to go back in time ato previous versions of the dashboard and generate data patterns based on that. 
 
-I had to come up with this dirty hack because I had to keept track of how the numbers are changing over time and Threadfix does not provide an efficient way to do the same.
+I had to come up with this dirty hack because I had to keep track of how the numbers are changing over time and Threadfix does not provide an efficient way to do the same.
